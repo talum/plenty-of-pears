@@ -2,6 +2,6 @@
 
 <ul>
 <% @matches.each do |match| %>
-  <li><%= match.name %></li>
+  <li><%= match.name %> <%= render partial: 'users/accept_match', locals: {match_id: match.id, current_user: @user} %></li>
 <% end %>
 </ul>

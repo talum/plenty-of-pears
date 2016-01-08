@@ -26,9 +26,11 @@ class User < ActiveRecord::Base
   has_many :daily_matches
 
   def generate_matches
-    if Time.now - self.time_of_match > 24 
+    # binding.pry
+     if Time.zone.now - self.time_of_match > (24*60*60)
       create_daily_matches
     else
+      # binding.pry
       daily = DailyMatch.where("user_id = ? AND created_at >= ?", self.id, Time.zone.now.beginning_of_day)
       daily.map do |daily_match|
         User.find(daily_match.option_id)
@@ -38,6 +40,7 @@ class User < ActiveRecord::Base
 
   def create_daily_matches
     self.time_of_match = Time.zone.now
+    self.save
     pending = pending_matches
     num = 3-pending.length
     pending << randomly_generated_matches(num, pending)

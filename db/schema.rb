@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160108195441) do
+ActiveRecord::Schema.define(version: 20160108205125) do
 
   create_table "daily_matches", force: :cascade do |t|
     t.integer  "user_id"
@@ -49,6 +49,11 @@ ActiveRecord::Schema.define(version: 20160108195441) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "skills_users", force: :cascade do |t|
+    t.integer "skill_id"
+    t.integer "user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.integer  "location_id"
@@ -59,9 +64,9 @@ ActiveRecord::Schema.define(version: 20160108195441) do
     t.string   "oauth_token"
     t.string   "oauth_expires_at"
     t.string   "profile_picture"
-    t.datetime "time_of_match"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "time_of_match",    default: '2016-01-06 20:45:08'
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
   end
 
 end
