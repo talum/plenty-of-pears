@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  location_id: 1
+  match_radius: 1
+  current_project: MyString
+  provider: MyString
+  uid: MyString
+  oauth_token: MyString
+  oauth_expires_at: MyString
+  profile_picture: MyString
+
+two:
+  name: MyString
+  location_id: 1
+  match_radius: 1
+  current_project: MyString
+  provider: MyString
+  uid: MyString
+  oauth_token: MyString
+  oauth_expires_at: MyString
+  profile_picture: MyString
