@@ -1,0 +1,2 @@
+class DailyMatchesController < ApplicationController
+end

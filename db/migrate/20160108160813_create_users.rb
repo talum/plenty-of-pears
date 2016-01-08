@@ -10,6 +10,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :oauth_token
       t.string :oauth_expires_at
       t.string :profile_picture
+      t.datetime :time_of_match
 
       t.timestamps null: false
     end

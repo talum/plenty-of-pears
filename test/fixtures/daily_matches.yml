@@ -1,11 +1,12 @@
 # == Schema Information
 #
-# Table name: links
+# Table name: daily_matches
 #
 #  id         :integer          not null, primary key
-#  title      :string
-#  url        :string
 #  user_id    :integer
+#  option_1   :integer
+#  option_2   :integer
+#  option_3   :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -13,9 +14,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  url: MyString
+  user_id: 1
+  option_1: 1
+  option_2: 1
+  option_3: 1
 
 two:
-  title: MyString
-  url: MyString
+  user_id: 1
+  option_1: 1
+  option_2: 1
+  option_3: 1
