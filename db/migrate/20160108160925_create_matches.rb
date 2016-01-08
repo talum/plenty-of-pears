@@ -3,6 +3,7 @@ class CreateMatches < ActiveRecord::Migration
     create_table :matches do |t|
       t.integer :user_id
       t.integer :matched_user_id
+      t.integer :status
 
       t.timestamps null: false
     end
